@@ -4,7 +4,7 @@ class Db {
     private $host = 'localhost';
     private $usuario = 'root';
     private $senha = '';
-    private $banco = 'teste';
+    private $banco = 'login';
     
     // A propriedade deve apenas ser declarada, sem instanciar o objeto aqui
     public $conn;
@@ -20,7 +20,7 @@ class Db {
             die("ERROR: " . $this->conn->connect_error);
         }
     }
-stornar a conexão se precisar chamá-la fora da classe
+
     public function getConnection() {
         return $this->conn;
     }
